@@ -7,7 +7,6 @@ import TaskItem from "./TaskItem";
 const Tasks = () => {
   const { tasks, addTask, updateTask, deleteTask, loadingTasks } = useTasks();
   const [isActive, setIsActive] = useState(false);
-  console.log({ tasks });
 
   const handleAddTask = async (task) => {
     await addTask(task);

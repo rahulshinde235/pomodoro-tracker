@@ -26,7 +26,6 @@ const useTasks = () => {
       where("userId", "==", authUser.uid)
     );
 
-    // 🔥 Listen in realtime
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
@@ -89,7 +88,6 @@ const useTasks = () => {
 
   const useWeeklyPomodoroData = () => {
     return useMemo(() => {
-      // initialize weekdays
       const weekData = [
         { name: "Mon", pomodoro: 0 },
         { name: "Tue", pomodoro: 0 },
@@ -106,7 +104,7 @@ const useTasks = () => {
         const date = task.updatedAt.toDate
           ? task.updatedAt.toDate()
           : new Date(task.updatedAt);
-        const day = format(date, "EEE"); // returns Mon, Tue, etc.
+        const day = format(date, "EEE");
         const dayEntry = weekData.find((d) => d.name === day);
         if (dayEntry) dayEntry.pomodoro += task.completedPomos;
       });

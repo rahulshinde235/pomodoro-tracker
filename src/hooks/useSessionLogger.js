@@ -1,7 +1,6 @@
 import { calculateSessionDuration } from "../utils/calculateSessionDuration";
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { toast } from "react-toastify";
 import {
   addDoc,
   collection,
@@ -50,7 +49,6 @@ const useSessionLogger = () => {
 
       const sessionData = sessionSnap.data();
       const { taskId } = sessionData;
-      console.log({ taskId });
 
       // calculate duration
       const duration = calculateSessionDuration(sessionData.startedAt);
@@ -62,7 +60,6 @@ const useSessionLogger = () => {
         endedAt: serverTimestamp(),
         duration,
       });
-      console.log({ taskId });
 
       // 2️⃣ update related task
       if (taskId) {

@@ -69,7 +69,6 @@ export function AuthProvider({ children }) {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
       const { user } = result;
-      console.log(result);
       if (user) {
         await createUserIfNotExists(user);
         toast.success("User logged in successfully", {

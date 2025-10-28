@@ -1,20 +1,20 @@
-import { createBrowserRouter } from "react-router-dom"; // ✅ Fix import
+import { createHashRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import App from "./App";
 import LoginPage from "./pages/LoginPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/login",
-    element: <LoginPage />, // 👈 Public route
+    element: <LoginPage />,
   },
   {
     path: "/",
-    element: <ProtectedRoute />, // 👈 Everything below requires login
+    element: <ProtectedRoute />,
     children: [
       {
-        element: <App />, // 👈 App layout (contains <Outlet />)
+        element: <App />,
         children: [
           { index: true, element: <HomePage /> },
           { path: "report", element: <div>Report Page</div> },

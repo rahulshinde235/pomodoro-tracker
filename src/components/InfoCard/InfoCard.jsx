@@ -26,6 +26,7 @@ function Infocard() {
     setIsTimerActive(false);
     setTimeLeft(modeMap[phase]);
   }
+
   useEffect(() => {
     setTimeLeft(modeMap[phase]);
   }, [phase]);
