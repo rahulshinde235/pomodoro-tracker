@@ -1,5 +1,6 @@
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db } from "./firebase";
+
 export const createUserIfNotExists = async (user) => {
   if (!user) return;
 

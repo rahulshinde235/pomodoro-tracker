@@ -20,9 +20,9 @@ function App() {
   return (
     <>
       <div>
-        <ToastContainer />
         <Navbar />
         <main>
+          <ToastContainer />
           <Outlet location={backgroundLocation || location} />
 
           {isModal && reportMatch && (
