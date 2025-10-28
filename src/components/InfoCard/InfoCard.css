@@ -1,0 +1,21 @@
+.info-container,
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid orange;
+  padding: 1rem;
+}
+
+.info-card {
+  .modes,
+  .action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timer {
+    font-size: 7.5rem;
+  }
+}

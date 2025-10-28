@@ -1,0 +1,16 @@
+.taskItem-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: beige;
+  padding: 1rem;
+  color: black;
+}
+
+.taskItem-child {
+  display: flex;
+  justify-content: center;
+  margin: 0px 1rem;
+  gap: 1rem;
+  align-items: center;
+}

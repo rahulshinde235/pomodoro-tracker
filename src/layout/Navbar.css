@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 20px;
+    height: auto;
+  }
+}
+
+.action {
+  display: flex;
+}

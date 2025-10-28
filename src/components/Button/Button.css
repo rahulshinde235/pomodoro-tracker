@@ -1,0 +1,90 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 5px;
+
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+
+  box-shadow: none;
+  margin-left: 10px;
+
+  transition: background 0.2s ease, transform 0.1s ease;
+  /* remove min-width */
+  /* remove width and height */
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-icon {
+  margin-right: 0.4em;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* ensures logo looks white */
+}
+
+.button.start {
+  cursor: pointer;
+  border: none;
+  margin: 20px 0 0;
+  padding: 0 12px;
+  border-radius: 4px;
+
+  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+
+  font-family: "ArialRounded", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+
+  height: 55px;
+  width: 200px;
+
+  color: rgb(186, 73, 73);
+  background-color: white;
+
+  transition: color 0.5s ease-in-out;
+}
+
+.button.pause {
+  cursor: pointer;
+  border: none;
+  margin: 20px 0 0;
+  padding: 0 12px;
+  border-radius: 4px;
+
+  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+
+  font-family: "ArialRounded", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+
+  height: 55px;
+  width: 200px;
+
+  color: rgb(186, 73, 73);
+  background-color: white;
+
+  transition: color 0.5s ease-in-out;
+}
