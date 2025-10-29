@@ -36,13 +36,12 @@ const Tasks = () => {
           <Loader2 className="animate-spin text-amber-400" size={28} />
         </div>
       ) : tasks.length === 0 ? (
-        <p className="text-gray-500 text-center mt-6">
-          No tasks yet — add one!
-        </p>
+        <p className=" text-center mt-6">No tasks yet — add one!</p>
       ) : (
         <div className="space-y-3 mt-6">
           {tasks.map((task) => (
             <TaskItem
+              key={task.id}
               task={task}
               handleMarkComplete={handleMarkComplete}
               handleDelete={handleDelete}
